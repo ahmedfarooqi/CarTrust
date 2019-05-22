@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>CarTrust</title>
+        <link rel="icon" href="favicon.png?v=1.1">
+        <link href="views/style.css" type="text/css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <center>
+        <!-- <h1>CT</h1> -->
+        <br>
+        <br>
+        <img src="/images/logo.png" alt="CarTrust">
+        <br>
+        </form>
+        <br>
+        <!-- <input type="submit" value="Login" name="" class="btn btn-dark"/> -->
+        <form>
+            <input onClick="window.location.href='/account'" Value="Login"class="btn btn-dark"/>
+         </form>
+        <br>
+        <form method="post" action="/process/listings">
+            <input type="submit" value="View Listings" name="" class="btn btn-dark"/>
+        </form>
+
+        <form method="post" action="/process/findlistings">
+            <input type="number" value="" name = "findingID" id="findingID" />
+	           <input type="submit" value="Find" name="" class="btn btn-dark"/>
+        </form>
+
+        <!-- <a  href = 'views/listing.html'>Listings</a> -->
+        <br>
+        <form method="post" action="/process/cars">
+            <div class="container">
+                <div class="input-group mb-3 col-md-4">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:slategrey ; color: #ffffff !important; !important">YEAR</span>
+                    </div>
+                    <input type="number" class="form-control" id="year" name="year" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: slategrey; color: #ffffff !important; !important">MAKE</span>
+                        </div>
+                        <input type="text" class="form-control" id="make" name="make" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: slategrey; color: #ffffff !important; !important" >MODEL</span>
+                        </div>
+                        <input type="text" class="form-control" id="model" name="model" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+             </div>
+            <input type="submit" value="Search" name="" class="btn btn-dark" />
+        </form>
+        <br>
+        <form method="post" action="/process/newlisting">
+            <div class="container">
+
+                <div class="input-group mb-3 col-md-4">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:darkslategray; color: #ffffff !important; !important">Vehicle_id</span>
+                    </div>
+                    <input type="number" class="form-control" id="vehicle_id" name="vehicle_id" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group mb-3 col-md-4">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:darkslategray; color: #ffffff !important; !important">YEAR</span>
+                    </div>
+                    <input type="number" class="form-control" id="year" name="year" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">MAKE</span>
+                        </div>
+                        <input type="text" class="form-control" id="make" name="make" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important" >MODEL</span>
+                        </div>
+                        <input type="text" class="form-control" id="model" name="model" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">username</span>
+                        </div>
+                        <input type="text" class="form-control" id="url_username" name="url_username" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">brief</span>
+                        </div>
+                        <input type="text" class="form-control" id="brief" name="brief" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">address</span>
+                        </div>
+                        <input type="text" class="form-control" id="address" name="address" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">description</span>
+                        </div>
+                        <input type="text" class="form-control" id="description" name="description" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">price</span>
+                        </div>
+                        <input type="text" class="form-control" id="price" name="price" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">fuel type</span>
+                        </div>
+                        <input type="text" class="form-control" id="fuelfuel type" name="fuelfuel type" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">transmission</span>
+                        </div>
+                        <input type="text" class="form-control" id="transmission" name="transmission" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">type</span>
+                        </div>
+                        <input type="text" class="form-control" id="type" name="type" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">title_status</span>
+                        </div>
+                        <input type="text" class="form-control" id="title_status" name="title_status" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">paint</span>
+                        </div>
+                        <input type="text" class="form-control" id="paint" name="paint" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">odometer</span>
+                        </div>
+                        <input type="text" class="form-control" id="odometer" name="odometer" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">drive</span>
+                        </div>
+                        <input type="text" class="form-control" id="drive" name="drive" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">cylinders</span>
+                        </div>
+                        <input type="text" class="form-control" id="cylinders" name="cylinders" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">condition</span>
+                        </div>
+                        <input type="text" class="form-control" id="condition" name="condition" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3 col-md-4">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default" style="background-color: darkslategray; color: #ffffff !important; !important">vin</span>
+                        </div>
+                        <input type="text" class="form-control" id="vin" name="vin" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+            </div>
+            <input type="submit" value="Create" name="" class="btn btn-dark" />
+        </form>
+    </center>
+    </body>
+</html>
